@@ -39,8 +39,11 @@ p_client.wait()
 p_server.wait()
 output_file_server.flush()
 output_file_client.flush()
-print(f"Server and Client process has terminated")
+p_client.kill()
+p_server.kill()
+print(f"Server and Client process has been terminated")
 os.chdir("..")
+
 
 print("Begin checking output files...")
 time.sleep(1)
