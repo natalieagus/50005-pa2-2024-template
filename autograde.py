@@ -3,8 +3,8 @@ import time
 import os
 import sys
 
-if len(sys.argv) < 2:
-    print("Usage: python3 autograder [1,2]")
+if len(sys.argv) < 3:
+    print("Usage: python3 autograder.py [1,2] [port]")
     exit()
 
 os.system("./cleanup.sh")
@@ -13,6 +13,7 @@ version = 0
 try:
     version = int(sys.argv[1])
     assert version == 1 or version == 2
+    port = int(sys.argv[2])
 except Exception as e:
     print(e)
     exit()
@@ -26,12 +27,14 @@ os.chdir("./source")
 print(f"Spawning Server and Client CP{version}")
 print(f"It might take awhile, so be patient...")
 p_server = subprocess.Popen(
-    ["python3", f"ServerWithSecurityCP{version}.py"],
+    f"python3 ServerWithSecurityCP{version}.py {port}",
+    shell=True,
     stdout=output_file_server,
 )
 time.sleep(1)
 p_client = subprocess.Popen(
-    ["python3", f"ClientWithSecurityCP{version}.py"],
+    f"python3 ClientWithSecurityCP{version}.py {port}",
+    shell=True,
     stdin=input_file,
     stdout=output_file_client,
 )
@@ -39,11 +42,10 @@ p_client.wait()
 p_server.wait()
 output_file_server.flush()
 output_file_client.flush()
-p_client.kill()
 p_server.kill()
+p_client.kill()
 print(f"Server and Client process has been terminated")
 os.chdir("..")
-
 
 print("Begin checking output files...")
 time.sleep(1)
