@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 import secrets
 import traceback
-
+from signal import signal, SIGINT
 from cryptography import x509
 from cryptography.exceptions import InvalidSignature
 from cryptography.fernet import Fernet
@@ -98,6 +98,12 @@ def main(args):
         print(e)
         s.close()
 
-
+def handler(signal_received, frame):
+    # Handle any cleanup here
+    print('SIGINT or CTRL-C detected. Exiting gracefully')
+    exit(0)
+    
 if __name__ == "__main__":
+    # Tell Python to run the handler() function when SIGINT is recieved
+    signal(SIGINT, handler)
     main(sys.argv[1:])
