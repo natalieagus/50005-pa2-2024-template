@@ -26,7 +26,7 @@ python -m ensurepip --upgrade
 pip install -r requirements.txt
 ```
 
-### Run `./setup.,sh`
+### Run `./setup.sh`
 
 Run this in the root project directory:
 
