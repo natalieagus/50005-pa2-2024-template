@@ -1,4 +1,4 @@
-# 50.005 2022 Programming Assignment 2
+# 50.005 Programming Assignment 2
 
 This assignment requires knowledge from Network Security and basic knowledge in Python.
 
@@ -49,6 +49,20 @@ and:
 
 ```
 python3 source/ClientWithoutSecurity.py
+```
+
+### Using different machines
+
+You can also host the Server file in another computer:
+
+```sh
+python3 ServerWithoutSecurity.py [port] 127.0.0.1
+```
+
+The client computer can connect to it using the command:
+
+```sh
+python3 ClientWithoutSecurity.py [port] [server-ip-address]
 ```
 
 ### Exiting pipenv shell
