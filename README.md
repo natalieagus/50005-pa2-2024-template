@@ -26,13 +26,13 @@ python -m ensurepip --upgrade
 pip install -r requirements.txt
 ```
 
-### Run `./setup.,sh`
+### Run `./cleanup.,sh`
 
 Run this in the root project directory:
 
 ```
-chmod +x ./setup.sh
-./setup.,sh
+chmod +x ./cleanup.sh
+./cleanup.sh
 ```
 
 This will create 3 directories: `source/recv_files`, `source/recv_files_enc`, and `source/send_files_enc`. They are all empty directories that can't be added in `.git`.
