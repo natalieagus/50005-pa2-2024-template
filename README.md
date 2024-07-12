@@ -26,12 +26,12 @@ python -m ensurepip --upgrade
 pip install -r requirements.txt
 ```
 
-### Run `./setup.sh`
+### Run `./setup.,sh`
 
 Run this in the root project directory:
 
 ```
-chmod +x ./setup.,sh
+chmod +x ./setup.sh
 ./setup.,sh
 ```
 
@@ -39,7 +39,7 @@ This will create 3 directories: `source/recv_files`, `source/recv_files_enc`, an
 
 ### Run server and client files
 
-In two separate shell sessions, run:
+In two separate shell sessions, run (assuming you're in root project directory):
 
 ```
 python3 source/ServerWithoutSecurity.py
@@ -56,13 +56,13 @@ python3 source/ClientWithoutSecurity.py
 You can also host the Server file in another computer:
 
 ```sh
-python3 ServerWithoutSecurity.py [port] 127.0.0.1
+python3 source/ServerWithoutSecurity.py [port] 127.0.0.1
 ```
 
 The client computer can connect to it using the command:
 
 ```sh
-python3 ClientWithoutSecurity.py [port] [server-ip-address]
+python3 source/ClientWithoutSecurity.py [port] [server-ip-address]
 ```
 
 ### Exiting pipenv shell
