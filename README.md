@@ -56,13 +56,13 @@ python3 source/ClientWithoutSecurity.py [PORT] [ADDRESS|localhost]
 You can also host the Server file in another computer:
 
 ```sh
-python3 source/ServerWithoutSecurity.py [port] 127.0.0.1
+python3 source/ServerWithoutSecurity.py [PORT] 127.0.0.1
 ```
 
 The client computer can connect to it using the command:
 
 ```sh
-python3 source/ClientWithoutSecurity.py [port] [server-ip-address]
+python3 source/ClientWithoutSecurity.py [PORT] [SERVER-IP-ADDRESS]
 ```
 
 ### Exiting pipenv shell
