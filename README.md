@@ -56,7 +56,7 @@ python3 source/ClientWithoutSecurity.py
 You can also host the Server file in another computer:
 
 ```sh
-python3 source/ServerWithoutSecurity.py [PORT] 127.0.0.1
+python3 source/ServerWithoutSecurity.py [PORT] 0.0.0.0
 ```
 
 The client computer can connect to it using the command:
