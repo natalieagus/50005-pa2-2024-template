@@ -42,13 +42,13 @@ This will create 3 directories: `/recv_files`, `/recv_files_enc`, and `/send_fil
 In two separate shell sessions, run (assuming you're in root project directory):
 
 ```
-python3 source/ServerWithoutSecurity.py [PORT] [ADDRESS|localhost] [OAEP|PKCS1V15]
+python3 source/ServerWithoutSecurity.py [PORT] [ADDRESS|localhost]
 ```
 
 and:
 
 ```
-python3 source/ClientWithoutSecurity.py [PORT] [ADDRESS|localhost] [OAEP|PKCS1V15]
+python3 source/ClientWithoutSecurity.py [PORT] [ADDRESS|localhost]
 ```
 
 ### Using different machines
@@ -56,13 +56,13 @@ python3 source/ClientWithoutSecurity.py [PORT] [ADDRESS|localhost] [OAEP|PKCS1V1
 You can also host the Server file in another computer:
 
 ```sh
-python3 source/ServerWithoutSecurity.py [port] 127.0.0.1 [OAEP|PKCS]
+python3 source/ServerWithoutSecurity.py [port] 127.0.0.1
 ```
 
 The client computer can connect to it using the command:
 
 ```sh
-python3 source/ClientWithoutSecurity.py [port] [server-ip-address] [OAEP|PKCS]
+python3 source/ClientWithoutSecurity.py [port] [server-ip-address]
 ```
 
 ### Exiting pipenv shell
