@@ -26,6 +26,13 @@ python -m ensurepip --upgrade
 pip install -r requirements.txt
 ```
 
+If `ensurepip` is not available, you need to install it, e.g with Ubuntu:
+
+```
+# Adjust for your python version
+sudo apt-get install python3.10-venv
+```
+
 ### Run `./cleanup.,sh`
 
 Run this in the root project directory:
