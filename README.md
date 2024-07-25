@@ -26,29 +26,29 @@ python -m ensurepip --upgrade
 pip install -r requirements.txt
 ```
 
-### Run `./cleanup.,sh`
+### Run `./setup.,sh`
 
 Run this in the root project directory:
 
 ```
-chmod +x ./cleanup.sh
-./cleanup.sh
+chmod +x ./setup.sh
+./setup.sh
 ```
 
-This will create 3 directories: `source/recv_files`, `source/recv_files_enc`, and `source/send_files_enc`. They are all empty directories that can't be added in `.git`.
+This will create 3 directories: `/recv_files`, `/recv_files_enc`, and `/send_files_enc` in project root. They are all empty directories that can't be added in `.git`.
 
 ### Run server and client files
 
 In two separate shell sessions, run (assuming you're in root project directory):
 
 ```
-python3 source/ServerWithoutSecurity.py
+python3 source/ServerWithoutSecurity.py [PORT] [ADDRESS|localhost] [OAEP|PKCS1V15]
 ```
 
 and:
 
 ```
-python3 source/ClientWithoutSecurity.py
+python3 source/ClientWithoutSecurity.py [PORT] [ADDRESS|localhost] [OAEP|PKCS1V15]
 ```
 
 ### Using different machines
@@ -56,13 +56,13 @@ python3 source/ClientWithoutSecurity.py
 You can also host the Server file in another computer:
 
 ```sh
-python3 source/ServerWithoutSecurity.py [port] 127.0.0.1
+python3 source/ServerWithoutSecurity.py [port] 127.0.0.1 [OAEP|PKCS]
 ```
 
 The client computer can connect to it using the command:
 
 ```sh
-python3 source/ClientWithoutSecurity.py [port] [server-ip-address]
+python3 source/ClientWithoutSecurity.py [port] [server-ip-address] [OAEP|PKCS]
 ```
 
 ### Exiting pipenv shell
