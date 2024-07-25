@@ -35,20 +35,20 @@ chmod +x ./cleanup.sh
 ./cleanup.sh
 ```
 
-This will create 3 directories: `/recv_files`, `/recv_files_enc`, and `/send_files_enc` in project root. They are all empty directories that can't be added in `.git`.
+This will create 3 directories: `/recv_files`, `/recv_files_enc`, and `/send_files_enc` in project's root. They are all empty directories that can't be added in `.git`.
 
 ### Run server and client files
 
 In two separate shell sessions, run (assuming you're in root project directory):
 
 ```
-python3 source/ServerWithoutSecurity.py [PORT] [ADDRESS|localhost]
+python3 source/ServerWithoutSecurity.py
 ```
 
 and:
 
 ```
-python3 source/ClientWithoutSecurity.py [PORT] [ADDRESS|localhost]
+python3 source/ClientWithoutSecurity.py
 ```
 
 ### Using different machines
