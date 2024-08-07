@@ -33,13 +33,13 @@ If `ensurepip` is not available, you need to install it, e.g with Ubuntu:
 sudo apt-get install python3.10-venv
 ```
 
-### Run `./cleanup.,sh`
+### Run `./setup.sh`
 
 Run this in the root project directory:
 
 ```
-chmod +x ./cleanup.sh
-./cleanup.sh
+chmod +x ./setup.sh
+./setup.sh
 ```
 
 This will create 3 directories: `/recv_files`, `/recv_files_enc`, and `/send_files_enc` in project's root. They are all empty directories that can't be added in `.git`.
